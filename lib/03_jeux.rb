@@ -7,7 +7,7 @@ def init
     touche="l"
     puts "Appuyer sur L pour lancer le dé"
     jet=gets.chomp
-    puts @ok
+    
     if jet == touche
         @ok = 1
     else @ok =0
@@ -26,6 +26,9 @@ end
  etage=0
 init
 i=1
+
+if etage < 10
+
 while i == 1
     
     
@@ -53,9 +56,14 @@ while i == 1
             init
         end 
     
-    #return i+1
+    
     else @ok==0  
     init
     end
+    
+end
+
+else etage > 9
+    puts "Bravo, vous avez gagnez la partie en" "#{essai}" "essais"
 
 end
